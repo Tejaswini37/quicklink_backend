@@ -37,7 +37,8 @@ public class UrlService {
 
         System.out.println("Saved URL: " + shortCode);
 
-        return "http://localhost:8080/" + shortCode;
+        // return "http://localhost:8080/" + shortCode;
+        return shortCode;
     }
 
     public String getOriginalUrl(String shortCode) {

@@ -29,11 +29,8 @@ public class UrlController {
     @PostMapping("/shorten")
     public ResponseEntity<String> shorten(@RequestBody Map<String, String> request) {
         String originalUrl = request.get("originalUrl");
-        String shortCode = service.createShortUrl(originalUrl);
-
-        // RETURN ONLY SHORT CODE
-        return ResponseEntity.ok(shortCode);
-        // return ResponseEntity.ok(service.createShortUrl(originalUrl));
+        
+        return ResponseEntity.ok(service.createShortUrl(originalUrl));
     }
 
     @GetMapping("/{shortCode}")
